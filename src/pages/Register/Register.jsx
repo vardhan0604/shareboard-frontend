@@ -9,7 +9,7 @@ const Register = ({ setIsAuthenticated }) => {
 
   const handleRegister = async () => {
     try {
-      const response = await axios.post("http://localhost:3001/auth/register", {
+      const response = await axios.post("https://shareboard-backend.onrender.com/auth/register", {
         email,
         password,
       });

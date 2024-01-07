@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect, useMemo } from 'react';
-import io, { Socket } from 'socket.io-client';
 import soc from '../../socket';
 import { useParams } from 'react-router-dom';
 

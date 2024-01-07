@@ -2,6 +2,6 @@
 
 import io from 'socket.io-client';
 
-const soc = io("http://localhost:3001");
+const soc = io("https://shareboard-backend.onrender.com");
 
 export default soc;

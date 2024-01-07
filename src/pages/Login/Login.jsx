@@ -10,7 +10,7 @@ const Login = ({ setIsAuthenticated,setToken }) => {
   const handleLogin = async () => {
    
     try {
-      const response = await axios.post('http://localhost:3001/auth/login', { email, password });
+      const response = await axios.post('https://shareboard-backend.onrender.com/auth/login', { email, password });
       // Assuming your backend sends a token upon successful login
       const token = response.data.token;
       // Store the token or set it in your global state
