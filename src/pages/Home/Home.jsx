@@ -25,13 +25,13 @@ const Home = ({ token }) => {
   }
 
   return (
-    <div className='w-screen mt-10 mx-auto ml-10'>
+    <div className='w-screen mt-4  md:mt-10 mx-auto md:ml-10'>
       
 
     
-  <div className='flex flex-col gap-4 md:flex-row'>
-    <div className='flex w-full md:w-3/6'>
-      <label className='inline-block flex w-full'>
+  <div className='flex flex-col gap-4 md:flex-row justify-center	'>
+    <div className='flex  md:w-3/6 m-auto md:m-0'>
+      <label className='inline-block flex md:w-full'>
         Whiteboard ID:
         <input
           type="text"
@@ -44,14 +44,14 @@ const Home = ({ token }) => {
 
     <button
       onClick={handleJoinWhiteboard}
-      className="flex items-center justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-full md:w-2/12 md:mr-4 max-w-max"
+      className="flex items-center justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-full md:w-2/12 md:mr-4 max-w-max m-auto md:m-0"
     >
       Join Whiteboard
     </button>
 
     <button
       onClick={handleNewWhiteboard}
-      className="flex items-center justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-full md:w-2/12 md:mr-4 max-w-max"
+      className="flex items-center justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-full md:w-2/12 md:mr-4 max-w-max m-auto md:m-0"
     >
       New Whiteboard
     </button>
