@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
-
+import Navbar from '../../component/Navbar';
 const Home = ({ token }) => {
   const [socketId, setSocketId] = useState('');
   const navigate = useNavigate();
@@ -26,6 +26,9 @@ const Home = ({ token }) => {
 
   return (
     <div className='w-screen mt-10 mx-auto ml-10'>
+      
+
+    
   <div className='flex flex-col gap-4 md:flex-row'>
     <div className='flex w-full md:w-3/6'>
       <label className='inline-block flex w-full'>

@@ -6,6 +6,7 @@ import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import { useState } from 'react';
 import Home from './pages/Home/Home';
+import Navbar from './component/Navbar';
 // import Prac from './pages/Prac';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
 
   return (
     <Router>
+        <Navbar isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated}/>
       <Routes>
         <Route
           path="/login"
