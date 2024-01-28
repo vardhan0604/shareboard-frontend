@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Navigate } from "react-router-dom";
+import { Navigate ,useNavigate} from "react-router-dom";
 
 const Register = ({ setIsAuthenticated }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [shouldRedirect, setShouldRedirect] = useState(false); // New state variable
+  const navigate = useNavigate();
+
+  const redirectLogin = () => {
+    navigate('/login');
+  };
 
   const handleRegister = async () => {
     try {
@@ -88,6 +93,7 @@ const Register = ({ setIsAuthenticated }) => {
                 Register
               </button>
             </div>
+            <div className='text-xs text-center text-indigo-600 cursor-pointer	 hover:text-indigo-500' onClick={redirectLogin}>Already an User? Login Now</div>
           </form>
         </div>
       </div>

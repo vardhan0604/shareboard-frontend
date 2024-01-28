@@ -1,12 +1,18 @@
 // Login.js
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Navigate } from 'react-router-dom';
+import { Navigate,useNavigate } from 'react-router-dom';
 
 const Login = ({ setIsAuthenticated,setToken }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [shouldRedirect, setShouldRedirect] = useState(false); // New state variable
+  const navigate = useNavigate();
+
+  const redirectRegister = () => {
+    navigate('/register');
+  };
+
   const handleLogin = async () => {
    
     try {
@@ -71,11 +77,11 @@ const Login = ({ setIsAuthenticated,setToken }) => {
                 <label htmlFor="password"  className="block text-sm font-medium leading-6 text-gray-900">
                   Password
                 </label>
-                <div className="text-sm">
+                {/* <div className="text-sm">
                   <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
                     Forgot password?
                   </a>
-                </div>
+                </div> */}
               </div>
               <div className="mt-2">
                 <input
@@ -99,6 +105,7 @@ const Login = ({ setIsAuthenticated,setToken }) => {
                Login
               </button>
             </div>
+            <div className='text-xs text-center text-indigo-600 cursor-pointer	 hover:text-indigo-500' onClick={redirectRegister}>New User? Register Now</div>
           </form>
 
         </div>
